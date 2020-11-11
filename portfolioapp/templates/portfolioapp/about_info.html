@@ -1,0 +1,64 @@
+<div class="row justify-content-xl-center">
+    <div class="row" >
+      <div class="col-sm-4">
+        <div class="card cardadjust bg-transparent">
+            <h5 class="card-title headercard">Education</h5>
+            <div class="card-body">
+                <ul>
+                    {% for educationvalue in data.0.education.all %}
+                    <li>
+                        <p>{{ educationvalue.name_degree }}, {{ educationvalue.org_name }}
+                            ({{ educationvalue.start_date }}-{{ educationvalue.end_date|default_if_none:'' }})</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+      <div class="col-sm-3">
+        <div class="card cardadjust bg-transparent">
+            <h5 class="card-title headercard">Career</h5>
+          <div class="card-body">
+            <ul>
+                {% for careervalue in data.0.career.all %}
+                <li>
+                    <p>{{ careervalue.role }} in {{ careervalue.company }}
+                        ({{ careervalue.start_date }}-{{ careervalue.end_date|default_if_none:'today' }})
+                        {{ careervalue.description }}
+                    </p>
+                </li>
+                {% endfor %}
+                </ul>
+          </div>
+        </div>
+      </div>
+     <div class="col-sm-3">
+        <div class="card cardadjust bg-transparent">
+            <h5 class="card-title headercard">Projects</h5>
+          <div class="card-body">
+            <ul>
+                {% for projectsvalue in data.0.project.all %}
+                <li>
+                    <p>{{ projectsvalue.project_name }} ({{ projectsvalue.description }})-{{ projectsvalue.start_date }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+     <div class="col-sm-2">
+        <div class="card cardadjust bg-transparent">
+            <h5 class="card-title headercard">Skills</h5>
+          <div class="card-body">
+            <ul>
+                {% for knowledgevalue in data.0.knowledge.all %}
+                <li>
+                    <p>{{ knowledgevalue.knowledge_name }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

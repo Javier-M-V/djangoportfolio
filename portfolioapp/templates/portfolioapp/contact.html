@@ -1,0 +1,40 @@
+<!doctype html>
+{% load static %}
+{% url 'about' as about_url %}
+{% url 'main' as main %}
+{% url 'contact' as contact %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolioapp/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+    <title>Javier Moreno Vilaplana</title>
+</head>
+<body class="mainback mainbackground">
+    <div class="container-fluid">
+        {%block header %}
+        {% include 'portfolioapp/header.html' %}
+        {% endblock %}
+    </div>
+    <div class="container">
+        <div class="row justify-content-xl-center">
+            <img class="avatar" src="{% static 'img/mepixel_.png' %}" style="width:140px">
+        </div>
+        <div class="col-sm-12">
+            <div class="row justify-content-xl-center">
+                <a href="https://github.com/Javier-M-V">
+                    <img class="logo" src="{% static 'img/GitHub-Mark-Light-32px.png' %}">
+                </a>
+                <a href="https://www.linkedin.com/in/javier-moreno-vilaplana-20105215a/">
+                    <img class="logo" src="{% static 'img/LI-In-Bug_.png' %}">
+                </a>
+                <a data-toggle="tooltip" data-placement="bottom" title="{{ data.0.mail }}">
+                   <img class="logo" src="{% static 'img/mail.png' %}">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

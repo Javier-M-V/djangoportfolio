@@ -1,0 +1,92 @@
+li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 280;
+    color: hsl(0, 0%, 95%);
+    background-color: transparent;
+}
+
+a {
+    color: hsl(0, 0%, 95%);
+}
+
+.mainbackground{
+    background: url("/static/img/background_.png")  50% 0 repeat fixed;
+}
+
+.logo {
+
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width:32px
+}
+
+a:hover {
+  color: #dc3545;
+  text-decoration: none;
+}
+
+h1 {
+     font-family: 'Roboto', sans-serif;
+     font-weight: 300;
+     color: hsl(0, 0%, 95%);
+}
+
+ul {
+    list-style-position: outside;
+    margin-left:0;
+
+}
+
+.cardadjust{
+
+    height: 35rem;
+    font-family: 'Roboto', sans-serif;
+    color: hsl(0, 0%, 95%);
+    border-color: transparent;
+}
+
+.card-body {
+    padding-left: 0 !important;
+}
+
+.headercard{
+
+    border-bottom: 1px solid #dc3545;
+    background: tranparent;
+    color: #dc3545;
+}
+
+.avatar {
+
+    border-radius: 50%;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    border: 2px dashed #dc3545;
+
+}
+.avatar:hover {
+
+     border: 2px solid #dc3545;
+}
+
+.btn-outline-danger:hover {
+    font-family: 'Roboto', sans-serif;
+    color: hsl(0, 0%, 6%);
+}
+
+.midmainback {
+
+    background-color: hsl(0, 0%, 10%);
+}
+
+.mainlight {
+
+    background-color: hsl(0, 0%, 95%);
+}
+
+.mainback {
+
+    background-color: hsl(0, 0%, 6%);
+}
+
+
